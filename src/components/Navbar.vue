@@ -12,7 +12,10 @@ const links = [
 function onScroll() {
   stuck.value = window.scrollY > 50
 }
-onMounted(() => window.addEventListener('scroll', onScroll))
+onMounted(() => {
+  if (typeof window === 'undefined') return
+  window.addEventListener('scroll', onScroll)
+})
 onUnmounted(() => window.removeEventListener('scroll', onScroll))
 </script>
 <template>
