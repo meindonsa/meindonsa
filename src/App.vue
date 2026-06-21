@@ -11,6 +11,7 @@ import Projects from '@/components/project/Projects.vue'
 import { onMounted } from 'vue'
 
 onMounted(() => {
+  if (typeof window === 'undefined') return;
   const dot = document.getElementById('c-dot')!
   const ring = document.getElementById('c-ring')!
   let mx = 0,
