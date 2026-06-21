@@ -14,7 +14,6 @@ const toggle = () => {
 }
 
 onMounted(() => {
-  if (typeof window === 'undefined') return
   checkMobile()
   window.addEventListener('resize', checkMobile)
 })

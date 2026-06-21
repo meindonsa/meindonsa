@@ -1,11 +1,5 @@
-import { createSSRApp } from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
 import './style.css'
 
-export function createApp() {
-  const app = createSSRApp(App)
-
-  return {
-    app,
-  }
-}
+createApp(App).mount('#app')
