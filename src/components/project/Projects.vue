@@ -53,20 +53,20 @@ const projects = [
       <!-- Header -->
       <div class="flex flex-wrap justify-between items-end gap-5 mb-16">
         <div>
-          <span class="font-mono text-[.65rem] tracking-[.2em] uppercase text-gold block mb-3"
+          <span class="font-mono text-[.65rem] tracking-[.2em] uppercase text-accent block mb-3"
             >05 — Projets</span
           >
           <h2
             class="font-serif font-bold text-ivory leading-[1.05] tracking-[-0.03em]"
             style="font-size: clamp(2.2rem, 5vw, 3.8rem)"
           >
-            Réalisations <em class="text-gold">sélectionnées</em>
+            Réalisations <em class="text-accent">sélectionnées</em>
           </h2>
         </div>
         <a
           :href="GitHub.href"
           target="_blank"
-          class="border border-rule text-muted font-mono text-[.72rem] tracking-widest uppercase px-6 py-2.5 rounded-sm no-underline transition-all duration-200 hover:border-gold-line hover:text-gold"
+          class="border border-rule text-muted font-mono text-[.72rem] tracking-widest uppercase px-6 py-2.5 rounded-sm no-underline transition-all duration-200 hover:border-accent-line hover:text-accent"
         >
           Voir GitHub →
         </a>
@@ -79,15 +79,15 @@ const projects = [
           :key="p.title"
           :class="[
             'col-span-12 bg-ink border border-rule rounded-lg overflow-hidden',
-            'transition-all duration-350 hover:-translate-y-1.5 hover:border-gold-line',
-            'hover:shadow-[0_20px_60px_rgba(0,0,0,.5)] reveal',
+            'transition-all duration-350 hover:-translate-y-1.5 hover:border-accent-line',
+            'hover:shadow-[0_20px_60px_rgba(11,22,32,.18)] reveal',
             p.wide ? 'md:col-span-12' : p.featured ? 'md:col-span-4' : 'md:col-span-4',
           ]"
           data-hover
         >
           <div :class="p.wide ? 'grid grid-cols-1 md:grid-cols-2' : ''">
             <div
-              class="aspect-video bg-ink2 flex items-center justify-center overflow-hidden text-5xl opacity-15 bg-gradient-to-br from-ink2 to-gold/5 transition-opacity duration-300 hover:opacity-25"
+              class="aspect-video bg-ink2 flex items-center justify-center overflow-hidden text-5xl opacity-15 bg-gradient-to-br from-ink2 to-accent/5 transition-opacity duration-300 hover:opacity-25"
               :class="p.wide ? 'aspect-auto min-h-[200px]' : ''"
             >
               {{ p.emoji }}
@@ -98,7 +98,7 @@ const projects = [
                 <span
                   v-for="t in p.tags"
                   :key="t"
-                  class="font-mono text-[.62rem] tracking-[.08em] bg-gold-dim border border-gold-line text-gold px-2.5 py-1 rounded-sm"
+                  class="font-mono text-[.62rem] tracking-[.08em] bg-accent-dim border border-accent-line text-accent px-2.5 py-1 rounded-sm"
                 >
                   {{ t }}
                 </span>
@@ -111,7 +111,7 @@ const projects = [
                   :key="l.label"
                   :href="l.href"
                   target="_blank"
-                  class="font-mono text-[.68rem] tracking-widest uppercase text-muted no-underline flex items-center gap-1.5 transition-colors duration-200 hover:text-gold"
+                  class="font-mono text-[.68rem] tracking-widest uppercase text-muted no-underline flex items-center gap-1.5 transition-colors duration-200 hover:text-accent"
                 >
                   {{ l.label }}
                 </a>

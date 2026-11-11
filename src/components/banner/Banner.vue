@@ -11,7 +11,7 @@ const socials: Ref<SocialNetwork[]> = ref(socialNetworks)
 <template>
   <section
     id="hero"
-    class="min-h-screen flex flex-col justify-center pt-28 pb-0 relative overflow-hidden bg-[radial-gradient(ellipse_80%_60%_at_60%_40%,rgba(212,168,83,.05)_0%,transparent_65%)]"
+    class="zone-dark bg-ink text-paper min-h-screen flex flex-col justify-center pt-28 pb-0 relative overflow-hidden bg-[radial-gradient(ellipse_80%_60%_at_60%_40%,rgba(255,184,77,.05)_0%,transparent_65%)]"
   >
     <div class="max-w-[1200px] mx-auto px-10 w-full">
       <!-- Main grid -->
@@ -20,8 +20,8 @@ const socials: Ref<SocialNetwork[]> = ref(socialNetworks)
         <div>
           <!-- Eyebrow -->
           <div class="flex items-center gap-4 mb-8">
-            <span class="block w-12 h-px bg-gold"></span>
-            <span class="font-mono text-[.68rem] tracking-[.18em] uppercase text-gold">
+            <span class="block w-12 h-px bg-accent"></span>
+            <span class="font-mono text-[.68rem] tracking-[.18em] uppercase text-accent">
               Ingénieur Logiciel — Libreville, Gabon
             </span>
           </div>
@@ -32,7 +32,7 @@ const socials: Ref<SocialNetwork[]> = ref(socialNetworks)
             style="font-size: clamp(4rem, 10vw, 9.5rem)"
           >
             Boris<br />
-            <em class="not-italic text-gold">Axel.</em>
+            <em class="not-italic text-accent">Axel.</em>
           </h1>
 
           <!-- Tagline -->
@@ -51,7 +51,7 @@ const socials: Ref<SocialNetwork[]> = ref(socialNetworks)
           <div class="flex flex-wrap gap-4 mt-10 items-center">
             <a
               href="#projects"
-              class="inline-flex items-center gap-2 bg-gold text-ink font-mono font-medium text-[.72rem] tracking-widest uppercase px-8 py-3.5 rounded-sm no-underline transition-all duration-200 hover:bg-ivory hover:-translate-y-0.5 hover:shadow-[0_10px_40px_rgba(212,168,83,.2)]"
+              class="inline-flex items-center gap-2 bg-accent text-ink font-mono font-medium text-[.72rem] tracking-widest uppercase px-8 py-3.5 rounded-sm no-underline transition-all duration-200 hover:bg-ivory hover:-translate-y-0.5 hover:shadow-[0_10px_40px_rgba(255,184,77,.2)]"
             >
               Voir mes projets
               <svg
@@ -67,7 +67,7 @@ const socials: Ref<SocialNetwork[]> = ref(socialNetworks)
             </a>
             <a
               href="#contact"
-              class="inline-flex items-center gap-2 border border-rule text-muted font-mono text-[.72rem] tracking-widest uppercase px-7 py-3.5 rounded-sm no-underline transition-all duration-200 hover:border-gold-line hover:text-gold"
+              class="inline-flex items-center gap-2 border border-rule text-muted font-mono text-[.72rem] tracking-widest uppercase px-7 py-3.5 rounded-sm no-underline transition-all duration-200 hover:border-accent-line hover:text-accent"
             >
               Travaillons ensemble
             </a>
@@ -81,7 +81,7 @@ const socials: Ref<SocialNetwork[]> = ref(socialNetworks)
               :href="s.href"
               :title="s.label"
               target="_blank"
-              class="w-10 h-10 rounded-full border border-rule flex items-center justify-center text-muted no-underline transition-all duration-200 hover:border-gold-line hover:text-gold hover:bg-gold-dim hover:-translate-y-1"
+              class="w-10 h-10 rounded-full border border-rule flex items-center justify-center text-muted no-underline transition-all duration-200 hover:border-accent-line hover:text-accent hover:bg-accent-dim hover:-translate-y-1"
               v-html="s.icon"
             >
             </a>
@@ -96,7 +96,7 @@ const socials: Ref<SocialNetwork[]> = ref(socialNetworks)
             :class="['py-7', i < stats.length - 1 ? 'border-b border-rule' : '']"
           >
             <div class="font-serif font-black text-ivory leading-none tracking-[-0.04em] text-5xl">
-              {{ st.value }}<span class="text-gold">{{ st.suf }}</span>
+              {{ st.value }}<span class="text-accent">{{ st.suf }}</span>
             </div>
             <div class="font-mono text-[.65rem] tracking-[.15em] uppercase text-muted mt-1.5">
               {{ st.lbl }}
@@ -113,7 +113,7 @@ const socials: Ref<SocialNetwork[]> = ref(socialNetworks)
           <span
             v-for="b in badges"
             :key="b"
-            class="font-mono text-[.65rem] tracking-[.08em] bg-ink2 border border-rule text-muted px-3 py-1.5 rounded-sm transition-all duration-200 hover:border-gold-line hover:text-gold"
+            class="font-mono text-[.65rem] tracking-[.08em] bg-ink2 border border-rule text-muted px-3 py-1.5 rounded-sm transition-all duration-200 hover:border-accent-line hover:text-accent"
           >
             {{ b }}
           </span>
