@@ -18,7 +18,7 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
 <template>
   <header
     :class="[
-      'fixed top-0 left-0 right-0 z-50 transition-all duration-400',
+      'zone-dark fixed top-0 left-0 right-0 z-50 transition-all duration-400',
       stuck ? 'bg-ink/90 backdrop-blur-xl border-b border-rule' : 'border-b border-transparent',
     ]"
     style="padding: 1.5rem 0"
@@ -27,7 +27,7 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
       <!-- Logo -->
       <a href="#" class="font-serif text-xl font-bold text-ivory tracking-tight no-underline">
         Boris Axel
-        <sup class="font-mono text-[.58rem] text-gold tracking-widest font-normal align-super ml-1">
+        <sup class="font-mono text-[.58rem] text-accent tracking-widest font-normal align-super ml-1">
           Fullstack
         </sup>
       </a>
@@ -52,7 +52,7 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
         </div>
         <a
           href="#contact"
-          class="font-mono text-[.68rem] tracking-widest uppercase bg-gold text-ink px-5 py-2 rounded-sm no-underline transition-all duration-200 hover:bg-ivory hover:-translate-y-px"
+          class="font-mono text-[.68rem] tracking-widest uppercase bg-accent text-ink px-5 py-2 rounded-sm no-underline transition-all duration-200 hover:bg-ivory hover:-translate-y-px"
         >
           Me contacter
         </a>
@@ -88,7 +88,7 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
         :key="l.href"
         :href="l.href"
         @click="mob = false"
-        class="font-serif text-4xl italic text-paper no-underline hover:text-gold transition-colors"
+        class="font-serif text-4xl italic text-paper no-underline hover:text-accent transition-colors"
       >
         {{ l.label }}
       </a>

@@ -35,14 +35,14 @@ const cards = [
     <div class="max-w-[1200px] mx-auto px-10">
       <!-- Header -->
       <div class="mb-16">
-        <span class="font-mono text-[.65rem] tracking-[.2em] uppercase text-gold block mb-3"
+        <span class="font-mono text-[.65rem] tracking-[.2em] uppercase text-accent block mb-3"
           >01 — À propos</span
         >
         <h2
           class="font-serif font-bold text-ivory leading-[1.05] tracking-[-0.03em]"
           style="font-size: clamp(2.2rem, 5vw, 3.8rem)"
         >
-          Du code qui <em class="text-gold">résout</em><br />de vrais problèmes.
+          Du code qui <em class="text-accent">résout</em><br />de vrais problèmes.
         </h2>
       </div>
 
@@ -89,7 +89,7 @@ const cards = [
           <div
             v-for="c in cards"
             :key="c.title"
-            class="bg-ink border border-rule rounded-md p-7 transition-colors duration-300 hover:border-gold-line"
+            class="bg-ink border border-rule rounded-md p-7 transition-colors duration-300 hover:border-accent-line"
             data-hover
           >
             <div class="text-2xl mb-4">{{ c.icon }}</div>

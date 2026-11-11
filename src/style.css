@@ -33,26 +33,45 @@
   font-display: swap;
 }
 
+/* Thème par défaut : CLAIR « papier » (sections de contenu).
+   Les zones sombres (navbar, héros, contact, pied de page) ajoutent la classe .zone-dark
+   qui redéfinit les mêmes variables : les composants gardent les mêmes classes. */
 @theme {
-  --color-ink: #010d14; /* fond principal */
-  --color-ink2: #021626; /* fond alterné */
-  --color-ink3: #023859; /* surface cards */
-  --color-paper: #c8dce8; /* texte principal */
-  --color-paper2: #a0bece; /* texte secondaire */
-  --color-ivory: #e8f4fc; /* texte fort / titres */
-  --color-accent: #4db8ff; /* bleu électrique — remplace l'or */
-  --color-accent-dim: rgba(77, 184, 255, 0.1);
-  --color-accent-line: rgba(77, 184, 255, 0.25);
-  --color-cyan: #00d4ff; /* accent secondaire froid */
-  --color-muted: #4a7a96; /* texte atténué */
-  --color-muted2: #2a5470; /* texte très atténué */
-  --color-rule: rgba(77, 184, 255, 0.08); /* bordures subtiles */
-  --color-ok: #3dd68c; /* vert disponibilité */
+  --color-ink: #f7f5f0; /* fond principal */
+  --color-ink2: #ffffff; /* fond alterné */
+  --color-ink3: #ebe7dd; /* surface cards */
+  --color-paper: #1f2a33; /* texte principal */
+  --color-paper2: #3a4955; /* texte secondaire */
+  --color-ivory: #0b1620; /* texte fort / titres */
+  --color-accent: #9a5700; /* ambre foncé (5,2:1 sur fond clair) */
+  --color-accent-dim: rgba(154, 87, 0, 0.1);
+  --color-accent-line: rgba(154, 87, 0, 0.3);
+  --color-muted: #52616d; /* texte atténué */
+  --color-muted2: #5d6c78; /* texte très atténué */
+  --color-rule: #ddd8cb; /* bordures subtiles */
+  --color-ok: #0f7a4d; /* vert disponibilité */
   --font-sans: 'JetBrainsMono Nerd Font', 'JetBrains Mono', 'Cascadia Code', monospace;
   --font-mono: 'JetBrainsMono Nerd Font', 'JetBrains Mono', 'Cascadia Code', monospace;
 
   --text-hero: clamp(4rem, 10vw, 9.5rem);
   --text-sec: clamp(2.2rem, 5vw, 3.8rem);
+}
+
+/* Zone sombre : ardoise + ambre vif (9,4:1 sur le fond) */
+.zone-dark {
+  --color-ink: #16222f;
+  --color-ink2: #1d2d3e;
+  --color-ink3: #25394e;
+  --color-paper: #dbe6ee;
+  --color-paper2: #b6c7d4;
+  --color-ivory: #f4f9fc;
+  --color-accent: #ffb84d;
+  --color-accent-dim: rgba(255, 184, 77, 0.12);
+  --color-accent-line: rgba(255, 184, 77, 0.3);
+  --color-muted: #93abbd;
+  --color-muted2: #7f98ab;
+  --color-rule: #2b3d50;
+  --color-ok: #4ade80;
 }
 
 *,
@@ -96,7 +115,7 @@ body {
   position: fixed;
   width: 8px;
   height: 8px;
-  background: var(--color-accent);
+  background: #e0901a; /* ambre moyen : visible sur zones claires et sombres */
   border-radius: 9999px;
   pointer-events: none;
   z-index: 9999;
@@ -110,7 +129,7 @@ body {
   position: fixed;
   width: 34px;
   height: 34px;
-  border: 1px solid rgba(77, 184, 255, 0.35);
+  border: 1px solid rgba(224, 144, 26, 0.55);
   border-radius: 9999px;
   pointer-events: none;
   z-index: 9998;
@@ -124,7 +143,7 @@ body {
 .cursor-expand #c-ring {
   width: 54px;
   height: 54px;
-  border-color: var(--color-accent);
+  border-color: #e0901a;
 }
 
 .cursor-expand #c-dot {
